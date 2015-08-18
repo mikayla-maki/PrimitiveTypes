@@ -1,0 +1,13 @@
+{
+    "name": "trentonmaki/primitive-types",
+    "description": "A library tohat allows you to type hint primitive types like Inintgers and strings",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "MakiCode",
+            "email": "trentonmaki@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
