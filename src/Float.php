@@ -1,5 +1,7 @@
 <?php
 
+namespace Types;
+
 /**
  * Created by IntelliJ IDEA.
  * User: trentonmaki

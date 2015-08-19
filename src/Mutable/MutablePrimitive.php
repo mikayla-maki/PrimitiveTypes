@@ -1,6 +1,6 @@
 <?php
 
-namespace Types;
+namespace Types\Mutable;
 use InvalidArgumentException;
 
 /**
@@ -9,7 +9,7 @@ use InvalidArgumentException;
  * Date: 8/18/15
  * Time: 6:27 PM
  */
-abstract class Primitive
+abstract class MutablePrimitive
 {
 
     private $val;
@@ -25,6 +25,14 @@ abstract class Primitive
     public function get()
     {
         return $this->val;
+    }
+
+    public function set($val)
+    {
+        if(!$this->type($val)) {
+            throw new InvalidArgumentException("Incorrect type passed");
+        }
+        $this->val = $val;
     }
 
     /**

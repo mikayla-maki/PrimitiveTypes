@@ -1,14 +1,14 @@
 <?php
 
-namespace Types;
+namespace Types\Mutable;
 
 /**
  * Created by IntelliJ IDEA.
  * User: trentonmaki
  * Date: 8/18/15
- * Time: 6:32 PM
+ * Time: 6:25 PM
  */
-class Numeric extends Primitive
+class Integer extends MutablePrimitive
 {
 
     /**
@@ -16,6 +16,6 @@ class Numeric extends Primitive
      */
     protected function type($val)
     {
-        return is_numeric($val);
+        return is_int($val);
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Types;
+namespace Types\Mutable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -8,7 +8,7 @@ namespace Types;
  * Date: 8/18/15
  * Time: 6:32 PM
  */
-class Numeric extends Primitive
+class String extends MutablePrimitive
 {
 
     /**
@@ -16,6 +16,6 @@ class Numeric extends Primitive
      */
     protected function type($val)
     {
-        return is_numeric($val);
+        return is_string($val);
     }
 }
