@@ -2,6 +2,7 @@
 
 namespace Types;
 use InvalidArgumentException;
+use JsonSerializable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -9,7 +10,7 @@ use InvalidArgumentException;
  * Date: 8/18/15
  * Time: 6:27 PM
  */
-abstract class Primitive
+abstract class Primitive implements JsonSerializable
 {
 
     private $val;
@@ -32,4 +33,8 @@ abstract class Primitive
      */
     protected abstract function type($val);
 
+
+    public function jsonSerialize() {
+        return $this->get();
+    }
 }

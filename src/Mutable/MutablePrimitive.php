@@ -2,6 +2,7 @@
 
 namespace Types\Mutable;
 use InvalidArgumentException;
+use JsonSerializable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -9,7 +10,7 @@ use InvalidArgumentException;
  * Date: 8/18/15
  * Time: 6:27 PM
  */
-abstract class MutablePrimitive
+abstract class MutablePrimitive implements JsonSerializable
 {
 
     private $val;
@@ -39,5 +40,9 @@ abstract class MutablePrimitive
      * @return bool
      */
     protected abstract function type($val);
+
+    public function jsonSerialize() {
+        return $this->get();
+    }
 
 }
