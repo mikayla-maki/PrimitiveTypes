@@ -19,3 +19,4 @@ class Numeric extends MutablePrimitive
         return is_numeric($val);
     }
 }
+
