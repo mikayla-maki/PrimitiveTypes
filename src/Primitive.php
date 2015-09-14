@@ -33,8 +33,12 @@ abstract class Primitive implements JsonSerializable
      */
     protected abstract function type($val);
 
-
     public function jsonSerialize() {
         return $this->get();
     }
+
+    public function __toString() {
+        return (string)$this->get();
+    }
+
 }
